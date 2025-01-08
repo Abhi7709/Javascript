@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="demo"></h2>
+    <form action="#">
+        <input type="number" id="num1" />
+        <input type="number" id="num2" />
+        <div>
+            <ol>
+                <button onclick="calculate(this)" value="+">[+]</button>
+                <button onclick="calculate(this)" value="-">[-]</button>
+                <button onclick="calculate(this)" value="*">[*]</button>
+                <button onclick="calculate(this)" value="/">[/]</button>
+
+            </ol>
+        </div>
+    </form>
+    <script>
+        // let grade = 'D'
+        // let result;
+
+        // switch (grade) {
+        //     case 'A':
+        //         result = 'A(Excellent)'
+        //         break;
+        //     case 'B':
+        //         result = 'B(Average)'
+        //         break;
+        //     case 'C':
+        //         result = 'A(Below than Average)'
+        //         break;
+
+        //     default:
+        //         result = "No grade";
+        // }
+        // console.log(result)
+        // document.write(result)
+
+
+
+
+
+        let day = 1;
+        let dayName;
+
+        // switch (day) {
+        //     case 1:
+        //         dayName = "Monday"
+        //         break;
+        //     case 2:
+        //         dayName = "Tuesday"
+        //         break;
+        //     case 3:
+        //         dayName = "Wednesday"
+        //         break;
+        //     case 4:
+        //         dayName = "Thursday"
+        //         break;
+        //     case 5:
+        //         dayName = "Friday"
+        //         break;
+        //     case 6:
+        //         dayName = "Saturday"
+        //         break;
+        //     case 7:
+        //         dayName = "Sunday"
+        //         break;
+
+        //     default:
+        //         dayName = "Invalid Day"
+        // }
+        // console.log(dayName)
+
+
+        // let number1 = Number(prompt('Enter the Number1'))
+        // let number2 = Number(prompt('Enter the Number2'))
+        // let operator = prompt("Enter a operator (either +,-,*,/)")
+
+        // switch (operator) {
+        //     case "+":
+        //         result = number1 + number2;
+        //         console.log(result)
+        //         break;
+        //     case "-":
+        //         result = number1 - number2;
+        //         console.log(result)
+        //         break;
+        //     case "*":
+        //         result = number1 * number2;
+        //         console.log(result)
+        //         break;
+        //     case "/":
+        //         result = number1 / number2;
+        //         console.log(result)
+        //         break;
+
+        //     default:
+        //         console.log("Invalid operator")
+        // }
+
+        function calculate(button) {
+            var num1 = document.getElementById("num1").value
+            var num2 = document.getElementById("num2").value
+
+            var a = Number(num1)
+            var a = Number(num2)
+
+            var operator = button.getAttribute('value')
+
+            switch (operator) {
+                case "+":
+                    document.getElementById("demo").innerHTML = a + b;
+                    break;
+                case "-":
+                    document.getElementById("demo").innerHTML = a - b;
+                    break;
+                case "*":
+                    document.getElementById("demo").innerHTML = a * b;
+                    break;
+                case "/":
+                    document.getElementById("demo").innerHTML = a / b;
+                    break;
+
+                default:
+                    document.getElementById("demo").innerHTML = "Invalid operator";
+            }
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

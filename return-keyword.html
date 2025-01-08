@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>return-keyword</title>
+</head>
+<body>
+    <script>
+        function demo(){
+            return "hello"
+        }
+       
+        let result=demo()
+        document.write(result+"<br>")
+        
+        function sum(a,b,c,d,e){
+            return (a+b)*(b+c)*(c+d)*(d+e)
+        }
+        document.write(sum(2,3,4,5,6)+"<br>")
+
+        function test(){
+            var a=10;
+            if(a<=10){
+                return "a is small"
+            }
+            else{
+                return " a is greater"
+            }
+        }
+        document.write(test()+"<br>")
+
+
+
+        function txt() {
+            for(let i=1;i<=10;i++){
+                if(i%2==0){
+                    return i + " is even"
+                }
+            }
+        }
+        document.write(txt())
+    </script>
+</body>
+</html>

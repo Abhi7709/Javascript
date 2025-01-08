@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rest parameter</title>
+</head>
+
+<body>
+    <script>
+        //rest parameter allows a function to accept a idefinite number of arguments as an array
+        //it is represented by the three(...)dots by the variable name.
+
+        function sum(...a) {
+            console.log(a)
+        }
+        sum(3, 5, 6, 8, 7, 9, 45, 456)
+
+        function demo(a, b, ...c) {
+            console.log(a)
+            console.log(b)
+            console.log(...c)
+        }
+        demo(2, 3, 5, 4, 8, 9, 6)
+
+        function addition(...d) {
+            let sum = 0;
+            for (let i of d) {
+                sum += i
+            }
+            return sum
+        }
+        console.log(addition(3, 4, 5, 6, 7, 8, 9))
+        //sum=sum+i
+
+
+        function sub(a,b,...c){
+            console.log(a-c)
+            console.log(...c)
+        } 
+        sub(5,4,3,2,1,8,7)
+
+        function mul(...a){
+            console.log(...a*2)
+        }
+        mul(3,3)
+
+    </script>
+</body>
+
+</html>

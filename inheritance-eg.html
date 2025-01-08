@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Person1 {
+            constructor(brand) {
+                this.name = brand
+            }
+            brandName() {
+                return `brand name is ${this.name}`
+            }
+        }
+
+        class Person2 extends Person1 {
+            constructor(brand) {
+                super(brand)
+            }
+
+            sameMethod() {
+                return this.brandName()
+            }
+        }
+        let per=new Person2('Levis')
+        document.write(per.sameMethod() + "<br>")
+
+        class Test {
+            constructor(a) {
+                this.name = a
+            }
+        }
+
+        class Test1 extends Test {
+
+            constructor(a, b) {
+                super(a)
+                this.year = b
+            }
+            print(){
+                return `Name is ${this.name} and year is ${this.year}`
+            }
+        }
+        class Test2 extends Test {
+
+            constructor(a, b) {
+                super(a,b)
+            }
+            overPrint() {
+                return this.print()
+            }
+        }
+        let print=new Test2('SM',2024)
+        document.write(print.overPrint())
+
+
+    </script>
+</body>
+
+</html>

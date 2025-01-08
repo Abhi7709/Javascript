@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <h1>String Methods</h1>
+    <form action="#" onsubmit="submitValue()">
+        <input type="text" id="inputValue" placeholder="Enter a character"/>
+        <input type="submit">
+    </form>
+
+    <script>
+        var str='JavaSCRIPT IS a Client Side ProGRAMMING lANGUAGE a.'
+
+        document.write(str.length+"<br>")
+        document.write(str[3] +"<br>")
+
+        //split(delimeter):Returns the array by Splitting the String with delimeter
+
+        var x=str.split(" ")
+        var y=x.length;
+        document.write("split length is "+y+"<br>")
+
+        //charAt(position):Return the character at specific position
+        document.write(str.charAt(2)+"<br>")
+
+        //charCodeAt(position):Returns the ASCII value of the character at specified position
+        document.write(str.charCodeAt(4)+"<br>")
+
+        //big():Returns the string it is embedded in big tag
+        document.write(str.big()+"<br>")
+
+        //bold():Returns the string as it is embedded in a bold tag
+        document.write(str.bold()+"<br>")
+
+        //blink():Returns the string as it is in blink tag
+        document.write(str.blink()+"<br>")
+
+        //italics():Returns the string as it is italic tag
+        document.write(str.italics()+"<br>")
+
+        //strike():Return the string as it is in a strike
+        document.write(str.strike()+"<br>")
+
+        //indexOf(substring,endposition):Searches the string from end for substring till the end position is rehead
+        document.write(str.indexOf('a')+"<br>")
+
+        //lastIndexOf(substring,endposition):Searches the string from end for substring till end position 
+        //is reached
+        document.write(str.lastIndexOf('a')+"<br>")
+
+        //match(): It maches the substring returns a -1 value.
+        document.write(str.match('JavaSCRIPT')+"<br>")
+
+        //slice(startposition,endposition): Returns the substring begining at start position and 
+        //ending with the character before endposition . endposition is optional. If excluded , the 
+        //substring continoues to the end of the string
+
+        document.write(str.slice(3,6)+"<br>")
+
+        //substring():same as like slice
+        document.write(str.substring(4,9)+'<br>')
+
+        //toLowerCase(): convert string to lowercase
+        document.write(str.toLowerCase()+"<br>")
+
+        //toUpperCase(): convert string to Uppercase
+        document.write(str.toUpperCase()+"<br>")
+
+        //replace(searchstr.newstr):Returns the string with replaces but if new string is found then
+        //then original string returned
+        document.write(str.replace("JavaSCRIPT","REACT")+"<br>")
+
+        //reverse
+        document.write(str.split(" ").reverse()+"<br>")
+
+        function submitValue(){
+            var value=document.getElementById("inputValue").value
+            var y=value.toUpperCase()
+            alert(y)
+            document.write(y+"<br>")
+        }
+
+        function reverseString(strr){
+            const arrayStrings=strr.split("")
+           const reverseArray=arrayStrings.reverse();
+          const join=reverseArray.join("")
+            return join;
+        }
+        var x=reverseString('hello')
+        document.write(x)
+
+
+    </script>
+</body>
+</html>

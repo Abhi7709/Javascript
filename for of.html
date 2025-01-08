@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for of</title>
+</head>
+
+<body>
+    <script>
+        //syntax
+        /* for(variable of iterable){
+            code block executed
+        } */
+
+        //for of loops allows to developers to iterate over an iterable objects such as array, strings ,maps,set
+
+
+        const ary = [1, 2, 3, 4, 5, 6, 7, 8]
+
+        for (let a of ary) {
+            document.write(a + "<br>")
+        }
+
+        const str = 'javascript'
+        document.write(str[2] + "<br>")
+
+        for (let char of str) {
+            document.write(char + "<br>")
+        }
+
+        ///map
+
+        //maps are new data structure in es6 that stores key-value pairs
+
+        const map = new Map([
+            ["name", "sevenmentor"],
+            ["age", 30],
+            ["city", "pune"]
+        ])
+        for (let [key, value] of map) {
+            document.write(key + " : " + value + "<br>")
+        }
+
+        ///set
+        //sets are another new data structure in es6 that can store the unique values
+
+        let set = new Set([2, 3, 4, 5, 6, 7, 8])
+        for (let value of set) {
+            document.write(value + "<br>")
+        }
+
+
+        //object
+        let person = {
+            name: "javascript",
+            age: 40,
+            city: "pune"
+        }
+        for (let key of Object.keys(person)) {
+            document.write(key + " : " + person[key] + "<br>")
+        }
+    </script>
+</body>
+
+</html>

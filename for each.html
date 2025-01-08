@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for each</title>
+</head>
+<body>
+    <script>
+        //The forEach method calls a function once for each element
+//in an array, in order to index value.
+// Syntax:
+// variableName.forEach(function/callback(currentValue[index [array]]) [thisArg])
+// Argument: Description,
+// currentValue: The value of the current element,
+// index: optional. The array of the current element
+// arr:optional, The array object the current element belongs to
+const lang=['Javascript', 'PHP', 'Python', 'NodeJs']
+// console.log(lang[0]);
+// console.log(lang[1]);
+// console.log(lang[2]);
+// console.log(lang[3])
+
+lang.forEach(function(item){
+    console.log(item)
+})
+
+let sum=0;
+let numbers=[34,23,12,35,65,21,3,2]
+
+//numbers.foreach(myFunction)
+
+//function myFunction(a){
+// }
+
+//numbers.forEach((x)=>{
+//  })
+
+numbers.forEach(function(item){
+    sum+=item;
+    //sum=sum+item
+})
+document.write(sum+"<br>")
+
+
+// variableName.forEach(function/callback(currentValue[index [array]]) [thisArg])
+
+
+let number=[2,3,4,5,6,7,8]
+number.forEach(function(item,index,arr){
+arr[index]=item*10
+})
+document.write(number)
+
+
+
+
+    </script>
+</body>
+</html>  

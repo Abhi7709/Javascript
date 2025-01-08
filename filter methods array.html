@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //example
+        let arr = [25, 7, 1, 6]
+        let x = arr.filter((a) => {
+            return a < 10
+        })
+        document.write(x + "<br>")
+
+        //example
+        let aray = [10, 15, 102, 56]
+
+        function demo(a) {
+            return a < 20
+        }
+        let y = aray.filter(demo)
+        document.write(y + "<br>")
+
+        //example
+        var array=[3,4,5,6,7,8,9,1,0,12,12,3,4,5]
+        array.filter((a)=>document.write((a%2==0)+"<br>"))
+
+        var res=array.filter(function(a){
+            return a%2==0
+        })
+        document.write(res)
+        
+    </script>
+</body>
+
+</html>

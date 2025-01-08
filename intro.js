@@ -1,0 +1,1 @@
+document.write("I am Compile from external js..."+"<br>")

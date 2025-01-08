@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Method</title>
+</head>
+<body>
+    <script>
+        //Number :It converts the number
+        let a='12';
+        let b=Number(a)
+        console.log(typeof(b))
+
+        //parseInt : It converts the decimal number to the integer without decimal
+        let c=23.4646454;
+        let d=Number.parseInt(c)
+        console.log(d)
+
+        //parseFloat : It returns the value with each decimal point
+        let e=45.54455;
+        let f=Number.parseFloat(e);
+        console.log(f)
+
+        //isFinite : It returns the value in true or False
+        let g=45.525;
+        let h=Number.isFinite(g)
+        console.log(h)
+
+        //toFixed : It returns the decimal value
+        let i=25.444457
+        let j=i.toFixed(3)
+        console.log(j)
+
+        //isInteger : Given a value is integer or not and given the answer is true or false
+        let k=87;
+        let l=Number.isInteger(k)
+        console.log(l)
+
+        //toPrecision : It returns the round off value
+        let m=67.987665;
+        let n=m.toPrecision(3)
+        console.log(n)
+    </script>
+</body>
+</html>

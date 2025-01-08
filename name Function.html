@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name function</title>
+</head>
+
+<body>
+
+    <form action="#" onsubmit="mysubmit()">
+        <input type="number" id="number1">
+        <input type="number" id="number2">
+
+        <input type="submit" />
+
+    </form>
+    <h2 id="txt"></h2>
+    <script>
+
+        function mysubmit() {
+            let num1 = Number(document.getElementById("number1").value);
+            let num2 = Number(document.getElementById("number2").value);
+
+            num3 = num1 + num2;
+            console.log(num3)
+
+            document.getElementById("txt").innerHTML = num3;
+        }
+
+
+
+        function demo() {
+            document.write("demo function call here...<br>")
+
+        }
+        demo()
+
+        var i = 20;
+        var b = 10;
+
+        function multiplication() {
+            document.write(i * b + "<br>")
+        }
+        multiplication()
+
+        function sum() {
+            document.write(i + b + "<br>")
+        }
+        sum()
+
+
+        function sub(a, b) {
+            document.write(a - b + "<br>")
+        }
+        sub(10, 20)
+
+        function test(a, b, c, d) {
+            document.write(a * b * c * d)
+        }
+        test(2, 4, 6, 7)
+    </script>
+</body>
+
+</html>

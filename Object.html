@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        //There are two primary ways to create an object in javascript:
+        //1)Object literal
+        //2)Object constructor
+
+
+        ///////////////////////////////////Object Litral////////////////////////////////////
+
+        let obj={
+            name:"SM",
+            age:30,
+            job:"developer"
+        }
+        console.log(obj)
+
+
+        //////////////////////////////////Object Constructor///////////////////////////////
+        let obj1=new Object()
+        obj1.name="xyz";
+        obj1.year=2024;
+        obj1.email='info@gmail.com'
+
+        console.log(obj1)
+
+
+        //accessing the properties of an object
+        let obj2={
+            name:"Abhijit",
+            age:30
+        }
+        console.log(obj2.name)
+
+        //modify properties
+        let obj3={
+            name:"xyz",
+            year:2024
+        }
+        obj3.name='replaced name'
+        console.log(obj3)
+
+        //adding properties to object
+        let obj4={
+            name:"Add",
+            year:2024
+        }
+        obj4.email="Addedemail@gmail.com"
+        console.log(obj4)
+
+        //removing the properties of an object
+        let obj5={
+            name:"Sevenmentor",
+            year:2024,
+            color:'Orange'
+        }
+        delete obj5.color
+        console.log(obj5)
+
+        //Checking if a property exists
+        let obj6={
+            name:'wer',
+            age:10,
+            job:"developer"
+        }
+        console.log(obj6.hasOwnProperty('job'))
+
+        //iterating through an object
+        let obj7={
+            name:"repeated",
+            age:10,
+            phone:123456787,
+            des:'trainee'
+        }
+        for(let key in obj7){
+            console.log(key+" : "+obj7[key])
+        }
+
+        //merging object
+        let obj8={name:"react"}
+        let obj9={year:2016}
+        let obj10={...obj8,...obj9}
+        console.log(obj10)
+
+        //object.length
+        let obj11={
+            name:'Javascript',
+            age:29
+        }
+        console.log(Object.keys(obj11).length)
+
+        //recognizing datatypes of object
+        let obj12={
+            name:'datatype'
+        }
+        console.log(typeof obj12==="object" && obj12!==null)
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

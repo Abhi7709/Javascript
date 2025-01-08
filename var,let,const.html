@@ -1,0 +1,75 @@
+<html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <script>
+        var a = 10;
+        var a = 30;
+        var a = 50;//redeclaration
+        a = 80;//reassign
+        a = 120;//global scope variable
+        console.log(a)
+
+
+        function demo() {
+            var a = 132; //function scope variable
+            console.log(a)
+        }
+        demo()
+
+        console.log(a)
+
+    </script>
+
+
+    <script>
+
+
+        //let  keyword
+        let b = 101;
+        //let b=120; //let keyword is not going to be redeclared.
+
+        b = 234;//reassign will be allowed with let keyword
+        b = 0;
+
+        function txt() {
+            let b = 56; //block scope variable
+            console.log(b);
+        }
+        txt()
+
+        console.log(b)
+
+        function test() {
+            let b = 78;
+            console.log(b)
+        }
+        test()
+
+
+
+
+        //const keyword
+        const c=12;
+        //const c=30; //redeclaration is not allowed
+
+        //c=34; //reassign is block scoped variable
+
+        function set(){
+            const c=76; //const is a block scoped variable
+            console.log(c)
+        }
+        set()
+
+        console.log(c)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>destructuring</title>
+</head>
+<body>
+    <script>
+        //destructuring means to extract value from array, object, function and assign 
+        //that value to variables
+
+        let ary=['sm',1,3,4,,true ,'js']
+        //let a=ary[0]
+        let [a,b,c,d,e,f]=ary;
+        document.write(a,b,f +"<br>")
+
+        let num=[1,2,3,4,5,6]
+        let[x,...y]=num
+        document.write(x+"<br>")
+        document.write(y+"<br>")
+
+        //swapping of variable
+        let w=20, v=30;
+        [w,v]=[v,w]
+        document.write(w+"<br>")
+        document.write(v+"<br>")
+
+        function myFunction(){
+            return ["a","b","c","d","e"]
+        }
+        let[first,last]=myFunction()
+        document.write(first+"<br>")
+        document.write(last+"<br>")
+
+
+
+
+
+    let marks={
+        sci:90,
+        math:80,
+        eng:70
+    }
+    let {sci:p,math:q,eng:r}=marks
+    document.write(p +"<br>")
+
+
+    const obj={
+        section1:{
+            sci:80,
+            math:90
+        },
+        section2:{
+            eng:90,
+            sst:80
+        }
+    }
+let {section1:{sci:sci,math:m},section2:{eng:eng,sst:s}}=obj
+document.write("sci marks is "+ sci +"<br>" )
+document.write("math marks is "+ m +"<br>" )
+document.write("eng marks is "+ eng +"<br>" )
+document.write("sst marks is "+ s +"<br>" )
+
+
+
+    </script>
+</body>
+</html>

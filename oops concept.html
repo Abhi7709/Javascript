@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Demo{
+            constructor(){
+                console.log("working")
+            }
+        }
+        let a=new Demo()
+        console.log(a)
+
+        class Text{
+            constructor(name,age){
+                this.name=name,
+                this.age=age
+            }
+            getDetails(){
+                return(`my name is ${this.name} and age is ${this.age}`)
+            }
+            setDetails(){
+                return(`my name is ${this.name}`)
+            }
+        }
+        let b=new Text('sevenmentor',30)
+        let c=new Text('xyz',10)
+        let d=new Text('abcd',20)
+        document.write(d.setDetails()+"<br>")
+        document.write(c.setDetails()+"<br>")
+        document.write(b.setDetails()+"<br>")
+        document.write(b.getDetails()+"<br>")
+
+        function Car(name,maker,enginer) {
+            this.name=name,
+            this.maker=maker,
+            this.engine=engine
+            
+        }
+
+        Car.prototype.info=function(){
+            document.write(`the name of the car is ${this.name} and maker is 
+            ${this.maker} and engine capacity is ${this.engine}`)
+        }
+        let car1=new Car('sevenmentor','sm','120cc')
+        let car2=new Car('abcd','pqr',300)
+        car1.info()
+        car2.info()
+
+
+
+    </script>
+</body>
+</html>

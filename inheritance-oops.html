@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class A{
+            constructor(name){
+                this.name
+            }
+        }
+
+        class B extends A{
+            constructor(name){
+                super(name)
+                this.name=name
+            }
+            details(){
+                return ` my name is ${this.name}`
+            }
+        }
+        class C extends B {
+            constructor(name,age) {
+                super(name)
+                this.name=name
+                this.age=age
+            }
+            info(){
+                return `${this.details()} and age is ${this.age}`
+            }
+        }
+        var a=new C('SM',10)
+        document.write(a.info()+"<br>")
+    </script>
+</body>
+</html>

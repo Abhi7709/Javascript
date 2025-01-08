@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread operator</title>
+</head>
+<body>
+    <script>
+        //In javascript , the spread operator , represented by three(...) dots
+        //expands an iterable object (like an array , string or object )into its individual elements
+
+
+        const num1=[1,2,3,4,5]
+        const num2=[6,7,8,9]
+        const num3=[...num1,...num1]
+        console.log(num3)
+
+        const originalArray=[6,7,8]
+        const copyofArray=[...originalArray]
+        console.log(copyofArray)
+
+        let person1={name:'seven',lang:'js',year:'2024'}
+        let person2={city:'pune',pincode:411055}
+        let mergeObject={...person1,...person2}
+        console.log(mergeObject)
+
+        //function arguments
+        function sum(a,b){
+            return a+b
+        }
+        const number=[3,4,5,6]
+        const result=sum(...number)
+        console.log(result)
+    </script>
+</body>
+</html>

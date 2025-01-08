@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map array</title>
+</head>
+
+<body>
+    <script>
+        //map methods creates new array after performing opoerations on array
+        
+        let arr=[45,25,88]
+        function demo(a) {
+            return a * 10
+        }
+        let x = arr.map(demo)
+        document.write(x + "<br>");
+
+
+        //example
+
+        var ary = [23, 45, 34, 66, 787, 433, 32]
+        var y = ary.map(function (e) {
+            return e >= 50
+        })
+        document.write(y + "<br>")
+
+        //example
+
+        var num = [23, 21, 34, 65, 43, 22, 56, 43, 64, 32]
+        var z = num.map((sub) => { return sub - 5 }
+        )
+        document.write(z + "<br>")
+
+        //example
+         let aray = [45, 23, 21, 26]
+
+        let a=aray.map((value)=>{
+            return value+1
+        })
+        document.write(a) 
+    </script>
+</body>
+
+</html>

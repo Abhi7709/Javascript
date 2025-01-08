@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let no1 = 3;
+        if (no1 > 5) {
+            document.write("no1 is greater" + "<br>")
+        }
+        else {
+            document.write("no1 is smaller" + "<br>")
+        }
+
+        (no1 > 5) ? document.write("no1 is greater" + "<br>") : document.write("no1 is smaller" + "<br>")
+
+
+        //ladder in turnary operator
+
+        let marks = 67;
+        let result = (marks < 40) ? "unsatisfied" : (marks < 60) ? "Average" : (marks < 80) ? "good" : (marks < 100) ? "Exellent" : "Please enter a valid marks";
+        document.write(result)
+
+        if (marks < 40) {
+            "unsatisfied"
+        }
+        else if (marks < 60) {
+            "Average"
+        }else if(marks < 80){
+            "good"
+        }else if (marks < 100) {
+            "Exellent"
+        }else{
+            "Please enter a valid marks"
+        }
+        document.write(result )
+
+
+
+        let num1=20;
+        let num2=10;
+        let num3=30;
+
+        let output=(num1>num2)?"num1 is greater":(num2>num3)?"num2 is greater":(num3>num1)?"num3 is greater":"enter a valid number";
+        document.write(output);
+    </script>
+</body>
+
+</html>

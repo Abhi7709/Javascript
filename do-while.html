@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do-while</title>
+</head>
+
+<body>
+
+    <!-- in do while if condition is not satisfying , still it will be execute atleast once -->
+    <script>
+        // example
+        let i = 1;
+        do {
+            document.write("Block executed " + i + "<br>")
+            i++
+        } while (i <= 10);
+
+
+        // example
+
+        var j = 1;
+        var txt = 2;
+        do {
+            document.write("sum is " + (j + txt)+"<br>")
+            j++
+        } while (j <= 5)
+
+        // example
+        var p=1;
+        var test='';
+        do {
+            test+=p;
+            document.write(test+" ")
+            p++
+        } while (p<=10);
+
+        //test=test+p
+        //test=1
+        //test=1+2=12
+        //test=12+3=123
+        //test=123+4=1234
+        //.
+        //.
+        //.
+        //test=123456789+10=12345678910
+    </script>
+</body>
+
+</html>
