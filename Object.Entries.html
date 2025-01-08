@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object entries</title>
+</head>
+
+<body>
+    <script>
+        //Object.entries returns an array of the key/value pairs of an Object
+        let person = {
+            name: 'Xyz',
+            age: 10,
+            email: 'xyz@gmail.com',
+            des: 'developer',
+            mobileNum: 123456
+        }
+        let test = Object.entries(person)
+        document.write(test + "<br>")
+
+        //////////////////////////////////
+
+        let person2 = {
+            name: 'John',
+            age: '10',
+            eyeColor: 'blue',
+            color: 'white'
+        }
+        let txt = '';
+        for (let [key, value] of Object.entries(person2)) {
+            txt += key + " : " + value + "<br>"
+        }
+        document.write(txt)
+    </script>
+</body>
+
+</html>
