@@ -6,6 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        function fruits(){
+            this.name='fruits'
+        }
+        function apple(){
+            fruits.call(this)
+        }
+        apple.prototype=Object.create(fruits.prototype)
+        const app=new apple()
+        console.log(app.name)
+
+        let person={
+            name:'Seven',
+            year:2024
+        }
+
+        //create new object
+        let person1=Object.create(person)
+        person1.name='abcd'
+        console.log(person1.name)
+
+    </script>
 </body>
 </html>
