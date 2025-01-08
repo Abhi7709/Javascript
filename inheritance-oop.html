@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>inheritance</title>
+</head>
+<body>
+    <script>
+         class A{
+            constructor(name){
+                this.name=name
+            }
+         }
+
+         class B extends A{
+            constructor(name){
+                super(name)
+                this.name=name
+            }
+            details(){
+                return `my name is ${this.name}`
+            }
+         }
+
+         class C extends B{
+            constructor(name,age){
+                super(name)
+                this.name=name
+                this.age=age
+            }
+            info(){
+                return `${this.details()} and age is ${this.age}`
+            }
+         }
+         let a=new C('SM',10)
+         document.write(a.info()+"<br>")
+
+         ////////////////////////////////////
+
+        class Person1{
+            constructor(brand){
+                this.name=brand
+            }
+            brandName(){
+                return ` brand name is ${this.name}`
+            }
+        }
+
+        class Person2 extends Person1{
+            constructor(brand){
+                super(brand)
+
+            }
+            sameMethod(){
+                return this.brandName()
+            }
+        }
+        let per=new Person2('Levis')
+        document.write(per.sameMethod()+"<br>")
+
+
+
+        ///////////////////////
+
+
+        class Test{
+            constructor(a){
+                this.name=a
+            }
+        }
+
+        class Test1 extends Test{
+            constructor(a,b){
+                super(a)
+                this.year=b
+            }
+            print(){
+                return `Name is ${this.name} and year is ${this.year} <br>`
+            }
+        }
+
+        class Test2 extends Test1{
+            constructor(a,b){
+                super(a,b)
+            }
+            overPrint(){
+                return this.print()
+            }
+        }
+        let print=new Test2('SM',2024)
+        document.write(print.overPrint())
+
+
+        ////////////STATIC METHOD///////////////////
+        //In static method directly call function by class Name
+
+        class Car{
+            constructor(name){
+                this.name=name
+            }
+            static hello(){
+                return "hello how are you"
+            }
+        }
+        let car=new Car("xyz")
+        document.write(Car.hello()+"<br>")
+    </script>
+</body>
+</html>
