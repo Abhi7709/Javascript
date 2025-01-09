@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>abstraction</title>
+</head>
+
+<body>
+    <!--  Abstraction is a way of hiding the implementation details and showing only the 
+    functionality to the users.In other words it will be ignores the irrelaevant details and
+     shows only the required overPrint
+
+
+     ****important note****
+     WE CAN NOT CREATE THE INSTANCE OF ABSTRACT CLASS 
+    IT REDUCES THE DUPLICATION OF CODE -->
+    <script>
+
+       /*  try{
+            //object constructor
+            function fruit(){
+                this.name="Fruit"
+                if(this.constructor===fruit){
+                    throw new Error("You can't create the instance of the fruit.")
+                }
+            }
+            //implementing method in the prototype
+            fruit.prototype.getName=function(){
+                return this.name;
+
+            }
+            const mango=new fruit()
+        }catch(error){
+            document.write(error)
+        } */
+
+
+
+
+        //abstract class
+        function fruit(){
+            this.name="Fruit";
+            if(this.constructor===fruit){
+                throw new Error ("You can't create the instance of the fruit")
+            }
+            //getName(){
+            //return this.name
+            //}
+        }
+        fruit.prototype.getName=function(){
+            return this.name
+        }
+        //child class
+        function Apple(fruitname){
+        this.name=fruitname
+        }
+        Apple.prototype=Object.create(fruit.prototype)
+        const apple=new Apple("Pear")
+        document.write(apple.getName())
+
+
+    </script>
+</body>
+
+</html>
