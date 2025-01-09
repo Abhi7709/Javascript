@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        let set = setTimeout(demo, 2000)
+        let a = 0;
+
+        function demo() {
+            var x = document.getElementById("div")
+            a += 600
+            x.style.width = a + 'px'
+        }
+
+        function stopFunction() {
+            clearTimeout(set)
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div"></div>
+    <button onclick="stopFunction()">Clear</button>
+</body>
+
+</html>
